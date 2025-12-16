@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "gool sample",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "gool.log_clustering",
+      "args": [
+        "--cfg-file",
+        "${workspaceFolder}/tests/data/drain3.ini",
+        "--similarity-threshold",
+        "0.65",
+        "${workspaceFolder}/tests/data/log/Zookeeper_2k.log"
+      ]
+    },
+    {
+      "name": "make install",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "exit",
+      "preLaunchTask": "install"
+    }
+  ]
+}

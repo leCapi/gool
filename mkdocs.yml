@@ -1,15 +1,18 @@
 site_name: gool
 repo_url: https://github.com/leCapi/gool
-site_url: https://leCapi.github.io/gool
+site_url: https://github.com/leCapi/gool
 site_description: cli logs clustering
 site_author: Olivier GODARD
 edit_uri: edit/main/docs/
 repo_name: leCapi/gool
-copyright: Maintained by <a href="https://leCapi.com">leCapi</a>.
+copyright: Maintained by <a href="https://github.com/leCapi/gool">leCapi</a>.
 
 nav:
   - Home: index.md
+  - Configuration: configuration.md
   - Modules: modules.md
+  - Contribute: info.md
+  - License: license.md
 plugins:
   - search
   - mkdocstrings:

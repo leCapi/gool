@@ -1,0 +1,135 @@
+1878 - 261 - 2015-07-29 <TIME> - WARN [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+1764 - 231 - 2015-07-29 <TIME> - INFO [/<IP>:3888:QuorumCnxManager$Listener@493] - Received connection request <*>
+1734 - 260 - 2015-07-29 <TIME> - WARN [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = <*> error =
+1590 - 184 - 2015-07-29 <TIME> - WARN [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+1572 - 187 - 2015-07-29 <TIME> - WARN <*> - Send worker leaving thread
+ 270 -  43 - <*> <TIME> - WARN [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 2 at election address /<IP>:3888
+ 234 -  45 - <*> <TIME> - WARN [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@793] - Connection request from old client <*> will be dropped if server is in r-o mode
+ 234 -  36 - <*> <TIME> - INFO [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: <HEX>
+ 228 -  30 - <*> <TIME> - INFO [SessionTracker:ZooKeeperServer@325] - Expiring session <HEX>, timeout of 10000ms exceeded
+ 222 -  28 - <*> <TIME> - WARN [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@349] - caught end of stream exception
+ 216 -  27 - <*> <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@774] - Notification time out: 60000
+ 132 -  21 - 2015-08-25 <TIME> - WARN <*> - Cannot open channel to 3 at election address /<IP>:3888
+ 114 -  21 - 2015-07-30 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@1001] - Closed socket connection for client <*> which had sessionid <HEX>
+ 114 -  18 - 2015-07-30 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@839] - Client attempting to establish new session at <*>
+ 102 -  15 - 2015-07-30 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxnFactory@197] - Accepted socket connection from <*>
+  90 -  13 - 2015-07-29 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxnFactory@197] - Accepted socket connection from <*>
+  84 -  13 - 2015-08-24 <TIME> - WARN <*> - Cannot open channel to 3 at election address /<IP>:3888
+  72 -  10 - 2015-07-29 <TIME> - ERROR <*> - Unexpected exception causing shutdown while sock still open
+  60 -  11 - 2015-07-31 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@1001] - Closed socket connection for client <*> which had sessionid <HEX>
+  54 -   9 - 2015-07-30 <TIME> - INFO [CommitProcessor:2:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  48 -   7 - 2015-07-29 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@839] - Client attempting to establish new session at <*>
+  48 -   7 - 2015-07-31 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxnFactory@197] - Accepted socket connection from <*>
+  42 -   6 - 2015-07-30 <TIME> - INFO [ProcessThread(sid:1 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: <HEX>
+  42 -   6 - 2015-07-31 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@839] - Client attempting to establish new session at <*>
+  36 -   6 - 2015-08-20 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@1001] - Closed socket connection for client <*> which had sessionid <HEX>
+  30 -   5 - 2015-07-29 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@1001] - Closed socket connection for client <*> which had sessionid <HEX>
+  24 -   4 - 2015-07-29 <TIME> - INFO [CommitProcessor:1:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  24 -   4 - 2015-07-30 <TIME> - INFO [CommitProcessor:1:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  24 -   4 - 2015-08-10 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@1001] - Closed socket connection for client <*> which had sessionid <HEX>
+  24 -   3 - 2015-08-20 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxnFactory@197] - Accepted socket connection from <*>
+  24 -   5 - 2015-07-29 <TIME> - INFO <*> - Notification: 3 (n.leader), <HEX> (n.zxid), <HEX> (n.round), LOOKING (n.state), 3 (n.sid), <HEX> (n.peerEPoch), <*> (my state)
+  24 -   4 - 2015-07-30 <TIME> - INFO [CommitProcessor:3:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  24 -   4 - 2015-07-31 <TIME> - INFO [CommitProcessor:3:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  18 -   2 - 2015-07-30 <TIME> - WARN [WorkerSender[myid=1]:QuorumCnxManager@368] - Cannot open channel to <*> at election address /<IP>:3888
+  18 -   3 - 2015-07-31 <TIME> - INFO [CommitProcessor:1:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  18 -   2 - 2015-08-10 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@839] - Client attempting to establish new session at <*>
+  18 -   2 - 2015-08-10 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:Learner@107] - Revalidating client: <HEX>
+  18 -   2 - 2015-08-20 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@839] - Client attempting to establish new session at <*>
+  18 -   3 - 2015-08-20 <TIME> - WARN [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@354] - Exception causing close of session <HEX> due to java.io.IOException: ZooKeeperServer not running
+  18 -   3 - 2015-08-20 <TIME> - INFO [CommitProcessor:1:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  18 -   3 - 2015-07-31 <TIME> - INFO [CommitProcessor:2:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  18 -   1 - <*> <TIME> - INFO [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+  18 -   3 - 2015-07-29 <TIME> - INFO [CommitProcessor:3:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  12 -   2 - 2015-08-07 <TIME> - INFO <*> - Notification: 3 (n.leader), <HEX> (n.zxid), <HEX> (n.round), <*> (n.state), 3 (n.sid), <HEX> (n.peerEPoch), LOOKING (my state)
+  12 -   2 - 2015-08-10 <TIME> - INFO [CommitProcessor:1:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  12 -   2 - 2015-08-10 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  12 -   2 - 2015-08-10 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@832] - Client attempting to renew session <HEX> at <*>
+  12 -   2 - 2015-08-20 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@1001] - Closed socket connection for client <*> (no session established for client)
+  12 -   1 - 2015-08-21 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxnFactory@197] - Accepted socket connection from <*>
+  12 -   1 - 2015-07-30 <TIME> - INFO [SessionTracker:ZooKeeperServer@325] - Expiring session <HEX>, timeout of 20000ms exceeded
+  12 -   1 - 2015-07-31 <TIME> - INFO [/<IP>:3888:QuorumCnxManager$Listener@493] - Received connection request <*>
+  12 -   2 - 2015-08-10 <TIME> - INFO [CommitProcessor:2:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  12 -   1 - 2015-08-10 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxnFactory@197] - Accepted socket connection from <*>
+  12 -   2 - 2015-08-20 <TIME> - INFO [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 1 (n.leader), <HEX> (n.zxid), <HEX> (n.round), LOOKING (n.state), 1 (n.sid), <HEX> (n.peerEPoch), LEADING (my state)
+  12 -   2 - 2015-08-20 <TIME> - INFO [CommitProcessor:2:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 10000 for client <*>
+  12 -   2 - 2015-07-29 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:NIOServerCnxn@1001] - Closed socket connection for client <*> (no session established for client)
+  12 -   2 - 2015-07-30 <TIME> - INFO [CommitProcessor:3:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 20000 for client <*>
+  12 -   1 - <*> <TIME> - INFO [main:QuorumPeer@933] - minSessionTimeout set to -1
+   6 -   0 - 2015-07-29 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@774] - Notification time out: 3200
+   6 -   1 - 2015-07-29 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@832] - Client attempting to renew session <HEX> at /<IP>:37115
+   6 -   0 - 2015-07-29 <TIME> - ERROR [CommitProcessor:1:NIOServerCnxn@180] - Unexpected Exception:
+   6 -   1 - 2015-07-30 <TIME> - INFO [CommitProcessor:1:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 20000 for client /<IP>:49800
+   6 -   0 - 2015-07-30 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.dir=/
+   6 -   0 - 2015-07-30 <TIME> - WARN [LearnerHandler-/<IP>:35276:LearnerHandler@575] - ******* GOODBYE /<IP>:35276 ********
+   6 -   0 - 2015-07-30 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670] - LOOKING
+   6 -   0 - 2015-07-30 <TIME> - WARN [RecvWorker:3:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+   6 -   0 - 2015-07-31 <TIME> - INFO [Thread-1:QuorumCnxManager$Listener@486] - My election bind port: <IP>/<IP>:3888
+   6 -   0 - 2015-07-31 <TIME> - INFO [WorkerSender[myid=1]:QuorumCnxManager@190] - Have smaller server identifier, so dropping the connection: (2, 1)
+   6 -   0 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@738] - FOLLOWING
+   6 -   0 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670] - LOOKING
+   6 -   0 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FastLeaderElection@740] - New election. My id = 1, proposed zxid=<HEX>
+   6 -   0 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:host.name=mesos-master-1
+   6 -   0 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Follower@63] - FOLLOWING - LEADER ELECTION TOOK - 49
+   6 -   0 - 2015-08-07 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Follower@63] - FOLLOWING - LEADER ELECTION TOOK - 238
+   6 -   0 - 2015-08-10 <TIME> - INFO [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+   6 -   0 - 2015-08-10 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+   6 -   1 - 2015-08-10 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:zookeeper.version=3.4.5--1, built on 06/10/2013 17:26 GMT
+   6 -   0 - 2015-08-10 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.name=zookeeper
+   6 -   0 - 2015-08-18 <TIME> - INFO [/<IP>:3888:QuorumCnxManager$Listener@493] - Received connection request /<IP>:34051
+   6 -   0 - 2015-08-18 <TIME> - INFO [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.name=Linux
+   6 -   1 - 2015-08-20 <TIME> - INFO [WorkerReceiver[myid=1]:FastLeaderElection@542] - Notification: 2 (n.leader), <HEX> (n.zxid), <HEX> (n.round), LOOKING (n.state), 1 (n.sid), <HEX> (n.peerEPoch), LOOKING (my state)
+   6 -   1 - 2015-08-20 <TIME> - INFO [WorkerReceiver[myid=1]:FastLeaderElection@542] - Notification: 3 (n.leader), <HEX> (n.zxid), <HEX> (n.round), LOOKING (n.state), 3 (n.sid), <HEX> (n.peerEPoch), FOLLOWING (my state)
+   6 -   0 - 2015-08-24 <TIME> - INFO [main:QuorumPeer@913] - tickTime set to 2000
+   6 -   0 - 2015-08-25 <TIME> - WARN [RecvWorker:3:QuorumCnxManager$RecvWorker@762] - Connection broken for id 3, my id = 1, error =
+   6 -   0 - 2015-07-29 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.vendor=Oracle Corporation
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:52264:LearnerHandler@575] - ******* GOODBYE /<IP>:52264 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:52308:LearnerHandler@575] - ******* GOODBYE /<IP>:52308 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:59060:LearnerHandler@575] - ******* GOODBYE /<IP>:59060 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:59103:LearnerHandler@575] - ******* GOODBYE /<IP>:59103 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:57247:LearnerHandler@575] - ******* GOODBYE /<IP>:57247 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:57319:LearnerHandler@575] - ******* GOODBYE /<IP>:57319 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:52476:LearnerHandler@575] - ******* GOODBYE /<IP>:52476 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:59203:LearnerHandler@575] - ******* GOODBYE /<IP>:59203 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:59211:LearnerHandler@575] - ******* GOODBYE /<IP>:59211 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:52502:LearnerHandler@575] - ******* GOODBYE /<IP>:52502 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:57458:LearnerHandler@575] - ******* GOODBYE /<IP>:57458 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:57502:LearnerHandler@575] - ******* GOODBYE /<IP>:57502 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:52703:LearnerHandler@575] - ******* GOODBYE /<IP>:52703 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:59406:LearnerHandler@575] - ******* GOODBYE /<IP>:59406 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:57580:LearnerHandler@575] - ******* GOODBYE /<IP>:57580 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:52818:LearnerHandler@575] - ******* GOODBYE /<IP>:52818 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:52844:LearnerHandler@575] - ******* GOODBYE /<IP>:52844 ********
+   6 -   0 - 2015-07-29 <TIME> - WARN [LearnerHandler-/<IP>:57653:LearnerHandler@575] - ******* GOODBYE /<IP>:57653 ********
+   6 -   1 - 2015-07-29 <TIME> - INFO [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:<HEX> type:create cxid:<HEX> zxid:<HEX> txntype:-1 reqpath:n/a Error Path:/home/curi/.zookeeper Error:KeeperErrorCode = NodeExists for /home/curi/.zookeeper
+   6 -   0 - 2015-07-30 <TIME> - INFO [/<IP>:3888:QuorumCnxManager$Listener@493] - Received connection request /<IP>:33209
+   6 -   1 - 2015-07-30 <TIME> - INFO [CommitProcessor:2:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 20000 for client /<IP>:54338
+   6 -   0 - 2015-07-30 <TIME> - INFO [main:QuorumPeerMain@127] - Starting quorum peer
+   6 -   1 - 2015-07-30 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: <HEX> to /var/lib/zookeeper/version-2/snapshot.300000dcd
+   6 -   1 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: <HEX> to /var/lib/zookeeper/version-2/snapshot.50000062e
+   6 -   1 - 2015-07-31 <TIME> - INFO [LearnerHandler-/<IP>:59348:LearnerHandler@263] - Follower sid: 3 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@33557fe4
+   6 -   0 - 2015-07-31 <TIME> - WARN [SendWorker:1:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+   6 -   1 - 2015-07-31 <TIME> - INFO [CommitProcessor:2:ZooKeeperServer@595] - Established session <HEX> with negotiated timeout 20000 for client /<IP>:45101
+   6 -   0 - 2015-08-07 <TIME> - WARN [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:QuorumCnxManager@368] - Cannot open channel to 3 at election address /<IP>:3888
+   6 -   0 - 2015-08-10 <TIME> - INFO [main:QuorumPeer@944] - maxSessionTimeout set to -1
+   6 -   0 - 2015-08-10 <TIME> - INFO [/<IP>:3888:QuorumCnxManager$Listener@493] - Received connection request /<IP>:44925
+   6 -   0 - 2015-08-10 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:QuorumPeer@738] - FOLLOWING
+   6 -   2 - 2015-08-18 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.class.path=/etc/zookeeper/conf:/usr/share/java/jline.jar:/usr/share/java/log4j-1.2.jar:/usr/share/java/xercesImpl.jar:/usr/share/java/xmlParserAPIs.jar:/usr/share/java/netty.jar:/usr/share/java/slf4j-api.jar:/usr/share/java/slf4j-log4j12.jar:/usr/share/java/zookeeper.jar
+   6 -   0 - 2015-08-18 <TIME> - INFO [LearnerHandler-/<IP>:49928:Leader@598] - Have quorum of supporters; starting up and setting last processed zxid: <HEX>
+   6 -   1 - 2015-08-18 <TIME> - INFO [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 2 (n.leader), <HEX> (n.zxid), <HEX> (n.round), FOLLOWING (n.state), 1 (n.sid), <HEX> (n.peerEPoch), LEADING (my state)
+   6 -   0 - 2015-08-20 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:FinalRequestProcessor@415] - shutdown of request processor complete
+   6 -   0 - 2015-08-20 <TIME> - WARN [LearnerHandler-/<IP>:42241:Leader@576] - First is <HEX>
+   6 -   0 - 2015-08-21 <TIME> - INFO [NIOServerCxn.Factory:<IP>/<IP>:2181:ZooKeeperServer@839] - Client attempting to establish new session at /<IP>:53818
+   6 -   0 - 2015-08-25 <TIME> - INFO [main:FileSnap@83] - Reading snapshot /var/lib/zookeeper/version-2/snapshot.b00000084
+   6 -   0 - 2015-08-25 <TIME> - INFO [LearnerHandler-/<IP>:32976:LearnerHandler@395] - Sending DIFF
+   6 -   0 - 2015-08-25 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670] - LOOKING
+   6 -   0 - 2015-08-25 <TIME> - INFO [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2181:Learner@325] - Getting a snapshot from leader
+   6 -   0 - 2015-07-29 <TIME> - WARN [WorkerSender[myid=3]:QuorumCnxManager@368] - Cannot open channel to 2 at election address /<IP>:3888
+   6 -   0 - 2015-07-30 <TIME> - WARN [RecvWorker:1:QuorumCnxManager$RecvWorker@762] - Connection broken for id 1, my id = 3, error =
+   6 -   0 - 2015-07-30 <TIME> - INFO [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2181:QuorumPeer@670] - LOOKING
+   6 -   1 - 2015-07-30 <TIME> - INFO [WorkerReceiver[myid=3]:FastLeaderElection@542] - Notification: 3 (n.leader), <HEX> (n.zxid), <HEX> (n.round), FOLLOWING (n.state), 3 (n.sid), <HEX> (n.peerEPoch), FOLLOWING (my state)
+   6 -   0 - 2015-07-30 <TIME> - INFO [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.name=Linux
+   6 -   0 - 2015-07-30 <TIME> - INFO [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.name=zookeeper
+   6 -   0 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre
+   6 -   0 - 2015-07-31 <TIME> - INFO [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2181:Learner@325] - Getting a snapshot from leader
+   6 -   0 - 2015-08-10 <TIME> - INFO [ProcessThread(sid:3 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: <HEX>

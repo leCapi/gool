@@ -1,0 +1,25 @@
+298 - 27 - [Sun Dec 04 <TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+281 - 21 - [Sun Dec 04 <TIME>] [error] mod jk child workerEnv in error state <*>
+271 - 24 - [Mon Dec 05 <TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+258 - 19 - [Mon Dec 05 <TIME>] [error] mod jk child workerEnv in error state <*>
+105 -  8 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 7
+101 -  8 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 8
+ 95 -  8 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 6
+ 94 -  8 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 6
+ 93 -  7 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 8
+ 89 -  7 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 7
+ 87 -  7 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 9
+ 73 -  6 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 9
+ 59 -  5 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 10
+ 18 -  1 - [Sun Dec 04 <TIME>] [error] [client <IP>] Directory index forbidden by rule: /var/www/html/
+ 16 -  1 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 11
+ 16 -  1 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 10
+ 14 -  1 - [Mon Dec 05 <TIME>] [error] [client <IP>] Directory index forbidden by rule: /var/www/html/
+  6 -  0 - [Sun Dec 04 <TIME>] [error] jk2 init() Can't find child <*> in scoreboard
+  6 -  0 - [Sun Dec 04 <TIME>] [error] mod jk child init 1 -2
+  6 -  0 - [Mon Dec 05 <TIME>] [error] jk2 init() Can't find child <*> in scoreboard
+  6 -  0 - [Mon Dec 05 <TIME>] [error] mod jk child init 1 -2
+  3 -  0 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 12
+  2 -  0 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 12
+  2 -  0 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 13
+  1 -  0 - [Sun Dec 04 <TIME>] [notice] jk2 init() Found child 1568 in scoreboard slot 13
