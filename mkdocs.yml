@@ -9,9 +9,7 @@ copyright: Maintained by <a href="https://github.com/leCapi/gool">leCapi</a>.
 
 nav:
   - Home: index.md
-  - Configuration: configuration.md
   - Modules: modules.md
-  - Contribute: info.md
   - License: license.md
 plugins:
   - search
