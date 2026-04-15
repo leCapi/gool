@@ -11,9 +11,9 @@ The user can tune some settings to build right size clusters :
 - **tree-depth** :
   drain3 parameter (default 4) which high value lead to more clusters. This setting can be tunned in configuration file or on command line.
 - **pattern masking** :
-  drain3 parameter to mask pattern so lines can be group easier. For example we can replace all IP, or time before processing. This setting can only be tunned in configuration file.
+  drain3 parameter to mask pattern so lines can be group easier. For example we can replace all IPs, or times before processing. This setting can only be tunned in configuration file.
 - **filter** :
-  filter to only parse some of the line of the input files. For example if the user is focuses on error we can imagine something like : '.*(\| Warning |\| Error ).*'.
+  filter to only parse some of the line of the input files. For example if the user is focuses on error we can imagine something like : '.\*(\| Warning |\| Error ).\*'.
 
 For more details on drain3 parameters check the official repository :
 https://github.com/logpai/Drain3.
@@ -92,7 +92,7 @@ gool --help
 
 ## Example of a drain3.ini file
 
-gool try to load .drain3 file from your home. Otherwise you can use **--cfg-file** option. Without any configuration, gool will try to mask HEX, IP and times.
+gool try to load .drain3 file from your home. Otherwise you can use **--cfg-file** option. Without any configuration, gool will try to mask HEX, IPs and times.
 
 Below an example of configuration file :
 
@@ -124,6 +124,12 @@ Setup the uv virtual environment and install pre-commit hooks :
 
 ```bash
 make install
+```
+
+Non regression tests on all supported environments :
+
+```bash
+tox -p
 ```
 
 Generate and launch the documentation server :

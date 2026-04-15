@@ -20,7 +20,7 @@ classifiers = [
 
 dependencies = ["rich ~= 14.0",
   "drain3~=0.9",
-  "tyro>=0.9,<=1.0.8",
+  "tyro~=1.0.13",
 ]
 
 [project.scripts]
@@ -149,6 +149,6 @@ pass_env = ["PYTHON_VERSION"]
 allowlist_externals = ["uv"]
 commands = [
   ["uv", "sync", "--active", "--python", "{envpython}"],
-  ["uv", "run", "--active", "python", "-m", "pytest", "--doctest-modules", "tests", "--cov", "--cov-config=pyproject.toml", "--cov-report=xml"],
+  ["uv", "run", "--active", "python", "-m", "pytest", "--doctest-modules", "tests", "--cov", "--cov-config=pyproject.toml", "--cov-report=xml:build/{envname}/coverage.xml"],
   ["uv", "run", "--active", "mypy"]
 ]
