@@ -14,6 +14,16 @@ The user can tune some settings to build right size clusters :
   drain3 parameter to mask pattern so lines can be group easier. For example we can replace all IPs, or times before processing. This setting can only be tunned in configuration file.
 - **filter** :
   filter to only parse some of the line of the input files. For example if the user is focuses on error we can imagine something like : '.\*(\| Warning |\| Error ).\*'.
+- **time_max** :
+  max time of log lines, line with higher timestamp are discarded
+- **time_max** :
+  max time of log lines, line with higher timestamp are discarded
+- **time_pattern**:
+  pattern used to capture timestamp of each log line. Default will be "(\d{2}:\d{2}:\d{2}(?:\.\d{1,9})?)".
+- **time_format**:
+  Format code (for strptime) of the time extracted of each line to convert string into datetime to allow filtering. By default, it will be "%H:%M:%S.%f" or "%H:%M:%S".
+- **baseline**:
+  Generate another cluster as a baseline to compare with it.
 
 For more details on drain3 parameters check the official repository :
 https://github.com/logpai/Drain3.
@@ -29,8 +39,6 @@ Launch gool and filter lines before processing (config taken in ~/.drain3.ini):
 ```bash
 gool tests/data/log/Zookeeper_2k.log -f ".*WARN.*"
 ```
-
-which produces something like :
 
 ```bash
 11:34:48.805482 INFO     log_clustering : Loading configuration from /home/godardo/.drain3.ini                                                       log_clustering.py:111
@@ -82,6 +90,111 @@ Zookeeper_2k.log ━━━━━━━━━━━━━━━━━━━━━
 │     1 │              0 │ 2015-07-29 <TIME> - WARN [WorkerSender[myid=3]:QuorumCnxManager@368] - Cannot open channel to 2 at election address /<IP>:3888                │
 │     1 │              0 │ 2015-07-30 <TIME> - WARN [RecvWorker:1:QuorumCnxManager$RecvWorker@762] - Connection broken for id 1, my id = 3, error =                      │
 └───────┴────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+Launch gool and filter lines on specified time :
+
+```bash
+gool   /home/godardo/git/gool/tests/data/log/Apache_2k.log --time_format '%a %b %d %H:%M:%S %Y' --time_pattern '(\w{3} \w{3} \d{2} \d{2}:\d{2}:\d{2} \d{4})' --time_min 'Mon Dec 05 18:46:00 2005' --time_max 'Mon Dec 05 19:00:00 2005'
+```
+
+```bash
+22:59:35.061049 INFO     log_clustering : Loading configuration from /home/godardo/.drain3.ini                                                                                                                                                                                log_clustering.py:266
+22:59:35.069775 INFO     log_clustering : Running clustering.                                                                                                                                                                                                                 log_clustering.py:575
+22:59:35.091847 INFO     logs_miner : Reached a log line with time after the specified maximum time. Stopping processing further lines.                                                                                                                                           logs_miner.py:155
+22:59:35.092984 INFO     logs_miner : Processed 9 lines in 0.02 seconds (470.37 lines/second).                                                                                                                                                                                    logs_miner.py:164
+Apache_2k.log ━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   9%
+                                                  Log Clusters
+┏━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Count ┃ Char Size (KB) ┃ Template                                                                             ┃
+┡━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│     3 │              0 │ [Mon Dec 05 <TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties │
+│     3 │              0 │ [Mon Dec 05 <TIME>] [error] mod jk child workerEnv in error state 6                  │
+│     2 │              0 │ [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 8         │
+│     1 │              0 │ [Mon Dec 05 <TIME>] [notice] jk2 init() Found child 6740 in scoreboard slot 7        │
+└───────┴────────────────┴──────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+Compare logs with a baseline :
+
+```bash
+gool /home/godardo/git/gool/tests/data/log/Apache_2K_MonDec05.log  --display_common --baseline /home/godardo/git/gool/tests/data/log/Apache_2K_SunDec04.log
+```
+
+```bash
+23:04:06.371468 INFO     log_clustering : Loading configuration from /home/godardo/git/gool/tests/data/drain3_compare_baseline.ini                                                                                                                                            log_clustering.py:266
+23:04:06.374091 INFO     log_clustering : Running clustering.                                                                                                                                                                                                                 log_clustering.py:575
+23:04:06.389677 INFO     logs_miner : Processed 949 lines in 0.01 seconds (80002.33 lines/second).                                                                                                                                                                                logs_miner.py:164
+Apache_2K_MonDec05.log ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100%
+23:04:06.391483 INFO     log_clustering : Running baseline clustering.                                                                                                                                                                                                        log_clustering.py:588
+23:04:06.406525 INFO     logs_miner : Processed 1051 lines in 0.01 seconds (79220.32 lines/second).                                                                                                                                                                               logs_miner.py:164
+Apache_2K_SunDec04.log ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100%
+                         Missing from baseline
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Template                                                            ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ [<TIME>] [notice] jk2 init() Found child 1568 in scoreboard slot 13 │
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 11  │
+└─────────────────────────────────────────────────────────────────────┘
+                         Added from baseline
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Template                                                           ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 13 │
+└────────────────────────────────────────────────────────────────────┘
+                                Common with baseline
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Template                                                                         ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ [<TIME>] [error] [client <IP>] Directory index forbidden by rule: /var/www/html/ │
+│ [<TIME>] [error] jk2 init() Can't find child <*> in scoreboard                   │
+│ [<TIME>] [error] mod jk child init 1 -2                                          │
+│ [<TIME>] [error] mod jk child workerEnv in error state <*>                       │
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 10               │
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 12               │
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 6                │
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 7                │
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 8                │
+│ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 9                │
+│ [<TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties        │
+└──────────────────────────────────────────────────────────────────────────────────┘
+
+                                            Baseline Log Clusters
+┏━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Count ┃ Char Size (KB) ┃ Template                                                                         ┃
+┡━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   298 │             27 │ [<TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties        │
+│   281 │             21 │ [<TIME>] [error] mod jk child workerEnv in error state <*>                       │
+│    94 │              8 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 6                │
+│    93 │              7 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 8                │
+│    89 │              7 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 7                │
+│    87 │              7 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 9                │
+│    59 │              5 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 10               │
+│    18 │              1 │ [<TIME>] [error] [client <IP>] Directory index forbidden by rule: /var/www/html/ │
+│    16 │              1 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 11               │
+│     6 │              0 │ [<TIME>] [error] jk2 init() Can't find child <*> in scoreboard                   │
+│     6 │              0 │ [<TIME>] [error] mod jk child init 1 -2                                          │
+│     3 │              0 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 12               │
+│     1 │              0 │ [<TIME>] [notice] jk2 init() Found child 1568 in scoreboard slot 13              │
+└───────┴────────────────┴──────────────────────────────────────────────────────────────────────────────────┘
+
+                                                Log Clusters
+┏━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Count ┃ Char Size (KB) ┃ Template                                                                         ┃
+┡━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│   271 │             24 │ [<TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties        │
+│   258 │             19 │ [<TIME>] [error] mod jk child workerEnv in error state <*>                       │
+│   105 │              8 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 7                │
+│   101 │              8 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 8                │
+│    95 │              8 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 6                │
+│    73 │              6 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 9                │
+│    16 │              1 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 10               │
+│    14 │              1 │ [<TIME>] [error] [client <IP>] Directory index forbidden by rule: /var/www/html/ │
+│     6 │              0 │ [<TIME>] [error] jk2 init() Can't find child <*> in scoreboard                   │
+│     6 │              0 │ [<TIME>] [error] mod jk child init 1 -2                                          │
+│     2 │              0 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 12               │
+│     2 │              0 │ [<TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 13               │
+└───────┴────────────────┴──────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 More option details with :

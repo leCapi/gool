@@ -1,3 +1,4 @@
+Log Clusters
  12 -  1 - 2015-07-29 <TIME> - ERROR <*> - Unexpected exception causing shutdown while sock still open
   1 -  0 - 2015-07-29 <TIME> - ERROR [CommitProcessor:1:NIOServerCnxn@180] - Unexpected Exception:
   4 -  0 - 2015-07-29 <TIME> - INFO <*> - Notification: 3 (n.leader), <HEX> (n.zxid), <HEX> (n.round), LOOKING (n.state), 3 (n.sid), <HEX> (n.peerEPoch), <*> (my state)

@@ -1,0 +1,5 @@
+Log Clusters
+3 - 0 - [Mon Dec 05 <TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
+3 - 0 - [Mon Dec 05 <TIME>] [error] mod jk child workerEnv in error state 6
+2 - 0 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child <*> in scoreboard slot 8
+1 - 0 - [Mon Dec 05 <TIME>] [notice] jk2 init() Found child 6740 in scoreboard slot 7

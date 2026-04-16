@@ -15,6 +15,59 @@
       ]
     },
     {
+      "name": "gool sample apache date/time filtered",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "gool.log_clustering",
+      "args": [
+        "--raw",
+        "--cfg-file",
+        "${workspaceFolder}/tests/data/drain3.ini",
+        "${workspaceFolder}/tests/data/log/Apache_2k.log",
+        "--time_format",
+        "%a %b %d %H:%M:%S %Y",
+        "--time_pattern",
+        "(\\w{3} \\w{3} \\d{2} \\d{2}:\\d{2}:\\d{2} \\d{4})",
+        "--time_min",
+        "Mon Dec 05 18:46:00 2005",
+        "--time_max",
+        "Mon Dec 05 19:00:00 2005"
+      ]
+    },
+    {
+      "name": "gool sample apache time filtered",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "gool.log_clustering",
+      "args": [
+        "--raw",
+        "--cfg-file",
+        "${workspaceFolder}/tests/data/drain3.ini",
+        "${workspaceFolder}/tests/data/log/Apache_2k.log",
+        "--filter",
+        ".*Mon Dec 05.*",
+        "--time_min",
+        "18:46:00",
+        "--time_max",
+        "19:00:00"
+      ]
+    },
+    {
+      "name": "gool sample baseline comparaison apache",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "gool.log_clustering",
+      "args": [
+        "--cfg-file",
+        "${workspaceFolder}/tests/data/drain3_compare_baseline.ini",
+        "${workspaceFolder}/tests/data/log/Apache_2K_MonDec05.log",
+        "--baseline",
+        "${workspaceFolder}/tests/data/log/Apache_2K_SunDec04.log",
+        "--display_common",
+        "--raw"
+      ]
+    },
+    {
       "name": "make install",
       "type": "node-terminal",
       "request": "launch",

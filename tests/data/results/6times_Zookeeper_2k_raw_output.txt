@@ -1,3 +1,4 @@
+Log Clusters
 1878 - 261 - 2015-07-29 <TIME> - WARN [SendWorker:188978561024:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
 1764 - 231 - 2015-07-29 <TIME> - INFO [/<IP>:3888:QuorumCnxManager$Listener@493] - Received connection request <*>
 1734 - 260 - 2015-07-29 <TIME> - WARN [RecvWorker:188978561024:QuorumCnxManager$RecvWorker@762] - Connection broken for id 188978561024, my id = <*> error =

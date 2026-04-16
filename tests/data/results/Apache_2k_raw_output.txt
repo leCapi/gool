@@ -1,3 +1,4 @@
+Log Clusters
 298 - 27 - [Sun Dec 04 <TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
 281 - 21 - [Sun Dec 04 <TIME>] [error] mod jk child workerEnv in error state <*>
 271 - 24 - [Mon Dec 05 <TIME>] [notice] workerEnv.init() ok /etc/httpd/conf/workers2.properties
