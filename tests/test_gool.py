@@ -196,20 +196,20 @@ class TestNormalOutput:
         ]
         run_gool_on_file_from_cli_and_check(cmd, apache_mon_dec_05, expected_path)
 
-    def test_zookeeper_2K_no_raw(self) -> None:
+    def test_zookeeper_2k_no_raw(self) -> None:
         """Test that gool called with a file without raw produce an output without throw."""
         args = Arguments(
-            logfile_paths=((zookeeper_path_log,)),
+            logfile_paths=(zookeeper_path_log,),
             cfg_file=cfg_path,
         )
         result = main(args)
         assert result == 0
 
-    def test_zookeeper_2K_no_raw_no_config(self) -> None:
+    def test_zookeeper_2k_no_raw_no_config(self) -> None:
         """Test that gool called with a file without raw produce an output without throw."""
         cfg_path = data_dir_path / "drain3_no_exist.ini"
         args = Arguments(
-            logfile_paths=((zookeeper_path_log,)),
+            logfile_paths=(zookeeper_path_log,),
             cfg_file=cfg_path,
         )
         result = main(args)
@@ -326,7 +326,7 @@ class TestErrorHandling:
     def test_empty_no_row(self) -> None:
         """Test that gool called with an empty file without raw produce an output without throw."""
         args = Arguments(
-            logfile_paths=((input_dir_path / "empty.log",)),
+            logfile_paths=(input_dir_path / "empty.log",),
             cfg_file=cfg_path,
         )
         result = main(args)

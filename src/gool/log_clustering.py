@@ -95,7 +95,7 @@ class Arguments:
     # assume log lines are not ordered by time, and do not stop processing
     # after reaching a line with time after time_max.
     unordered_time: Annotated[tyro.conf.FlagCreatePairsOff[bool], tyro.conf.arg(aliases=["-u"])] = False
-    # baseline log files to compare with. If set, the clusters will compared to baseline clusters.
+    # baseline log files to compare with. If set, the clusters will be compared to baseline clusters.
     baseline: Annotated[tuple[pathlib.Path, ...], tyro.conf.arg(aliases=["-b"])] = ()
     # If set, all baseline clusters will also be displayed.
     display_common: Annotated[tyro.conf.FlagCreatePairsOff[bool], tyro.conf.arg(aliases=["-C"])] = False
